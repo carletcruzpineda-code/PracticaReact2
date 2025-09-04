@@ -1,0 +1,17 @@
+.btnB {
+    background-color: blue;
+    color: black;
+    padding: 10px 20px;
+    background-color: #61dafb;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btnB :hover{
+    background-color: rgb(11, 26, 110);
+    
+}
+
