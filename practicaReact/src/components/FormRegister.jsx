@@ -1,21 +1,29 @@
 import React, { useState } from 'react';
 import { Link,useNavigate } from 'react-router-dom'
 
-function FormRegister() {
+function FormRegister({setLogueado,setMensaje}) {
 
   const [nombre,setNombre] = useState ("")
   const [apellido,setApellido] = useState ("")
   const [password,setpassword] = useState ("")
 
-  const cargarDatos = () => {
+/*   const cargarDatos = () => {
+
     console.log(nombre,apellido,password)
+    
+  }
+ */
+
+  const registrar = () =>{ 
+    setMensaje("Ingreso Correcto")
+    setLogueado(true)
     
   }
 
 
   return (
     <div>
-        <div>
+        <div> 
             <label htmlFor="nombre">Nombre</label>
             <input type="text" id='nombre' placeholder='Digite su Nombre' value={nombre} onChange={(e) =>setNombre(e.target.value)} />
             <br />
@@ -27,13 +35,15 @@ function FormRegister() {
 
         </div>
         <br />
-        <button onClick={cargarDatos}>Cargar Datos</button>
+        <button onClick={registrar}>Registrar</button>
+        
+
         <br />
 
-        <p></p>
+       {/*  <p></p>
 
         <p>Ir a <Link to= "/home">Home</Link> </p>
-        <h1>{nombre}</h1>
+        <h1>{nombre}</h1> */}
     </div>
   )
 }

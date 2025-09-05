@@ -10,7 +10,7 @@ const Routing = () => {
       <Routes>
         <Route path='/Home' element={<Home />} />
         <Route path='/Page' element={<Page />} />
-        <Route path='/Registro' element={<Registro />} />
+        <Route path='/Registro' element={<Registro setLogueado={setLogueado} setMensaje={setMensaje}  />} />
         
       </Routes>
     </Router>
